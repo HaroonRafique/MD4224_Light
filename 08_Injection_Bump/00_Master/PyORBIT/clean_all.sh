@@ -3,4 +3,5 @@
 . clean_junk.sh
 cd ../
 . clean_folder.sh
+rm *.png
 cd PyORBIT
