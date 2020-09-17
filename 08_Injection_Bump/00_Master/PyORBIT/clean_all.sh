@@ -4,4 +4,5 @@
 cd ../
 . clean_folder.sh
 rm *.png
+rm *.tfs
 cd PyORBIT
