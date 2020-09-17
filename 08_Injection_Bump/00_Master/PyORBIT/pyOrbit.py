@@ -118,7 +118,7 @@ def Read_PTC_Twiss_Return_Dict(filename, verbose=True):
         i = -1        
         for value in l.split():
             i = i+1
-            if 'NAME' in dict_keys[i]:
+            if 'NAME' or 'KEYWORD' in dict_keys[i]:
                 d[dict_keys[i]].append(str(value))
             else:
                 d[dict_keys[i]].append(float(value))    
