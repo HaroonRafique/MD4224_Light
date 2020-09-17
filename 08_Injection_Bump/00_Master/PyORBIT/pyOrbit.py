@@ -197,7 +197,7 @@ if not rank:
         f.write('***********************************************************************************/\n')
         f.write('tune_x = 0.' + str(p['tunex'][-2:]) + ';\n')
         f.write('tune_y = 0.' + str(p['tuney'][-2:]) + ';\n')
-        f.write('lattice_start = ' + str(p['transverse_plane_flag']) + ';     !Choice of wire-scanner for lattice start position')
+        f.write('lattice_start = ' + str(p['transverse_plane_flag']) + ';     !Choice of wire-scanner for lattice start position\n')
         if s['InjectionBump']:
                 f.write('Injection_Bump = 1;     !Execute close of injection bump')
         else:
