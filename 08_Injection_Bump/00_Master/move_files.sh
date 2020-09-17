@@ -26,4 +26,3 @@ mv *.ptc PTC_Twiss
 mv PTC-PyORBIT_flat_file.flt PyORBIT
 mv MADX_Twiss/optimised_flat_file.tfs .
 mv MADX_Twiss/optimised_bare_simplified.tfs .
-./clean_folder.sh
