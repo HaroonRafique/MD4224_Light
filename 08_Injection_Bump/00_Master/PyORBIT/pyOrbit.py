@@ -156,15 +156,15 @@ def GetTunesFromPTC():
 print '\n\t\tmkdir on MPI process: ', rank
 from lib.mpi_helpers import mpi_mkdir_p
 mpi_mkdir_p('Plots')
-mpi_mkdir_p('All_Twiss')
 mpi_mkdir_p('input')
 mpi_mkdir_p('bunch_output')
 mpi_mkdir_p('output')
 mpi_mkdir_p('lost')
 
-# Lattice function dictionary to print closed orbit
+# Lattice function dictionary to print closed orbit etc
 #-----------------------------------------------------------------------
 if s['Update_Twiss']:
+        mpi_mkdir_p('All_Twiss')
 	ptc_dictionary_file = 'input/ptc_dictionary.pkl'
 	if not os.path.exists(ptc_dictionary_file):        
 		PTC_Twiss = PTCLatticeFunctionsDictionary()
@@ -542,6 +542,8 @@ orbit_mpi.MPI_Barrier(comm)
 #-----------------------------------------------------------------------
 if not rank:
         
+        import matplotlib
+        matplotlib.use('Agg')
         import matplotlib.pyplot as plt
         
         plt.rcParams['figure.figsize'] = [8.0, 5.0]
