@@ -41,7 +41,8 @@ parameters['n_macroparticles']			= int(5E5)
 
 # Make sure to fix the initial distribution at the nominal working point (6.21, 6.24)
 parameters['tomo_file'] = '../../00_Longitudinal_Distribution/PyORBIT_Tomo_file_MD4224_HB.mat'
-parameters['input_distn']=''
+parameters['LatticeFile'] = 
+parameters['input_distn']='../PTC_Twiss/1.tfs'
 
 parameters['gamma']			= 2.49253731343
 parameters['intensity']			= 72.5E+10
