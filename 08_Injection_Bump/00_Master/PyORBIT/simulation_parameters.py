@@ -87,7 +87,8 @@ parameters['turns_update'] = sorted(tu)
 # Simulation switches
 #-----------------------------------------------------------------------
 switches = {
-	'CreateDistn': False,   # Load from file to fix initial distribution to the incoming PSB beam
+	'InjectionBump': True, # Apply the injection bump in MAD-X and load corresponding PTC tables
+	'CreateDistn': False,  # Load from file to fix initial distribution to the incoming PSB beam
 	'Update_Twiss':	True,  # Perform PTC twiss and dump each turn - needed to output tune changes
 	'GridSizeX': 128,
 	'GridSizeY': 128,
