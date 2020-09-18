@@ -291,7 +291,8 @@ if sts['turn'] < 0:
 
         d_keys, d = Read_PTC_Twiss_Return_Dict(p['LatticeFile'])
         
-        print 'd[\'DISP1\'][0]', d['DISP1'][0]
+        print 'd[\'DISP1\'][0] =', d['DISP1'][0]
+        print 'p[\'beta\'][0] =', p['beta']
 
 	twiss_dict = dict()
         twiss_dict['alpha_x'] 	= d['ALFX'][0]
