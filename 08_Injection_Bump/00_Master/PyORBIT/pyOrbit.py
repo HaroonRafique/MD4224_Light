@@ -299,10 +299,10 @@ if sts['turn'] < 0:
         twiss_dict['alpha_y'] 	= d['ALFY'][0]
         twiss_dict['beta_x'] 	= d['BETX'][0]
         twiss_dict['beta_y'] 	= d['BETY'][0]
-        twiss_dict['D_x'] 		= d['DISP1'][0] * p['beta'] # Normalisation required when using PTC Twiss with time=true
-        twiss_dict['D_y'] 		= d['DISP3'][0] * p['beta']
-        twiss_dict['D_xp'] 		= d['DISP2'][0] * p['beta']
-        twiss_dict['D_yp'] 		= d['DISP4'][0] * p['beta']
+        twiss_dict['D_x'] 		= float(d['DISP1'][0])* float(p['beta']) # Normalisation required when using PTC Twiss with time=true
+        twiss_dict['D_y'] 		= float(d['DISP3'][0])* float(p['beta'])
+        twiss_dict['D_xp'] 		= float(d['DISP2'][0])* float(p['beta'])
+        twiss_dict['D_yp'] 		= float(d['DISP4'][0])* float(p['beta'])
         twiss_dict['x0'] 		= d['X'][0]
         twiss_dict['xp0'] 		= d['PX'][0]
         twiss_dict['y0'] 		= d['Y'][0]
