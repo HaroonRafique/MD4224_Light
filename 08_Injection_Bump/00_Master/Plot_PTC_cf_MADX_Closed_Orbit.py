@@ -69,7 +69,7 @@ for turn in sorted(ptc_iterators):
 		else:
 			ptc_last_s =float(l.split()[1])
 			s.append(float(l.split()[1]))
-			x.append(float(l.split()[8])*1E3)
+			x.append(float(l.split()[6])*1E3)
 
 	# Add to dictionary as dict[turn] = (s, x)
 	ptc_data[turn] = [s, x]
