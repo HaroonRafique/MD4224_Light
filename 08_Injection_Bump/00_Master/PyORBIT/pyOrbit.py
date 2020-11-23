@@ -295,18 +295,18 @@ if sts['turn'] < 0:
         print 'p[\'beta\'][0] =', p['beta']
 
 	twiss_dict = dict()
-        twiss_dict['alpha_x'] 	= d['ALFX'][0]
-        twiss_dict['alpha_y'] 	= d['ALFY'][0]
-        twiss_dict['beta_x'] 	= d['BETX'][0]
-        twiss_dict['beta_y'] 	= d['BETY'][0]
+        twiss_dict['alpha_x'] 	= float(d['ALFX'][0])
+        twiss_dict['alpha_y'] 	= float(d['ALFY'][0])
+        twiss_dict['beta_x'] 	= float(d['BETX'][0])
+        twiss_dict['beta_y'] 	= float(d['BETY'][0])
         twiss_dict['D_x'] 		= float(d['DISP1'][0])* float(p['beta']) # Normalisation required when using PTC Twiss with time=true
         twiss_dict['D_y'] 		= float(d['DISP3'][0])* float(p['beta'])
         twiss_dict['D_xp'] 		= float(d['DISP2'][0])* float(p['beta'])
         twiss_dict['D_yp'] 		= float(d['DISP4'][0])* float(p['beta'])
-        twiss_dict['x0'] 		= d['X'][0]
-        twiss_dict['xp0'] 		= d['PX'][0]
-        twiss_dict['y0'] 		= d['Y'][0]
-        twiss_dict['yp0'] 		= d['PY'][0]
+        twiss_dict['x0'] 		= float(d['X'][0])
+        twiss_dict['xp0'] 		= float(d['PX'][0])
+        twiss_dict['y0'] 		= float(d['Y'][0])
+        twiss_dict['yp0'] 		= float(d['PY'][0])
         twiss_dict['gamma_transition'] 	= Lattice.gammaT
         twiss_dict['circumference']     = Lattice.getLength()
         twiss_dict['length'] 		= Lattice.getLength()/Lattice.nHarm
