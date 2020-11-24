@@ -22,6 +22,7 @@ KFA__005  : HKICKER     , L := 0;         ! Fast Kicker
 MCHBAWWP  : HKICKER     , L := .23;       ! Corrector magnet, dipole horizontal, type 205
 MCHBBWWP  : HKICKER     , L := .27;       ! Corrector magnet, dipole horizontal, type 206
 MDBBBCWP  : HKICKER     , L := .19;       ! Dipole magnet, bumper horizontal, type 209
+Bump_Kicker:  SBEND     , L := .19;       ! HR 03.02.20 For Injection Bump Tune Swing
 MDBCAWWP  : HKICKER     , L := .3;        ! Dipole magnet, bumper vertical, type 210
 SEH__001  : HKICKER     , L := 0.8;       ! Electrostatic septum, mechanical length according to J. Borburgh
 SMH__001  : HKICKER     , L := 2.4;       ! Septum Magnet Horizontal
@@ -327,7 +328,8 @@ ENDSEQUENCE;
 
 PS40: SEQUENCE, L=1.6;
  PR.BPM40       : BPUNO     , AT = .0934, SLOT_ID = 2253958;
- PI.BSW40       : MDBBBCWP  , AT = .472 , SLOT_ID = 2253959;
+ !PI.BSW40       : MDBBBCWP  , AT = .472 , SLOT_ID = 2253959;
+ PI.BSW40       : Bump_Kicker  , AT = .472 , SLOT_ID = 2253959;
  PR.ODN40       : MONAAFWP  , AT = .802 , SLOT_ID = 2253960;
  PR.VVS40       : VVS       , AT = 1.251, SLOT_ID = 13720430; ! Position is an estimate
  PR.QDN40       : MQNAAIAP  , AT = 1.481, SLOT_ID = 2253961;
@@ -340,18 +342,21 @@ ENDSEQUENCE;
 
 PS42: SEQUENCE, L=1.6;
  PI.BTV42.A     : BTVMA001  , AT = 0    , SLOT_ID = 42854779;
- PI.BSW42       : MDBBBCWP  , AT = .472 ;
+ !PI.BSW42       : MDBBBCWP  , AT = .472 ;
+ PI.BSW42       : Bump_Kicker  , AT = .472 ;
  PI.BSF42       : MSG       , AT = 1.47 , SLOT_ID = 2253993; ! Slot type is to be checked
 ENDSEQUENCE;
 
 PS43: SEQUENCE, L=1.6;
  PR.BPM43       : ULG       , AT = .0934, SLOT_ID = 2254008;
- PI.BSW43       : MDBBBCWP  , AT = .5362, SLOT_ID = 2254009;
+ !PI.BSW43       : MDBBBCWP  , AT = .5362, SLOT_ID = 2254009;
+ PI.BSW43       : Bump_Kicker  , AT = .5362, SLOT_ID = 2254009;
  PR.QSK43       : MQSAAIAP  , AT = 1.495, SLOT_ID = 2254011;
 ENDSEQUENCE;
 
 PS44: SEQUENCE, L=1.6;
- PI.BSW44       : MDBBBCWP  , AT = 1.073, SLOT_ID = 2254026;
+ !PI.BSW44       : MDBBBCWP  , AT = 1.073, SLOT_ID = 2254026;
+ PI.BSW44       : Bump_Kicker  , AT = 1.073, SLOT_ID = 2254026;
  PR.MM44        : MM_AAIAP  , AT = 1.473, SLOT_ID = 5365808;
 ENDSEQUENCE;
 
