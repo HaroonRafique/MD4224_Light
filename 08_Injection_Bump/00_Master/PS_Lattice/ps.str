@@ -309,10 +309,10 @@ CC409 := (640.E-5/0.30)   /BRHO;
    PI.BSW26.22   , KICK := +BSW26;
    PI.BSW26.30   , KICK := +BSW26;
 
-   PI.BSW40      , KICK := +BSW40;
-   PI.BSW42      , KICK := +BSW42;
-   PI.BSW43      , KICK := +BSW43;
-   PI.BSW44      , KICK := +BSW44;
+   !PI.BSW40      , KICK := +BSW40;
+   !PI.BSW42      , KICK := +BSW42;
+   !PI.BSW43      , KICK := +BSW43;
+   !PI.BSW44      , KICK := +BSW44;
 
 /*******************************************************************************
 **                        Extraction dipoles                                  **
