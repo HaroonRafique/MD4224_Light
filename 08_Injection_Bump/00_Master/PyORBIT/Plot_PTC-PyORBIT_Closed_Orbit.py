@@ -16,7 +16,7 @@ plt.rcParams['savefig.dpi'] = 300
 
 plt.rcParams['font.size'] = 12
 plt.rcParams['legend.fontsize'] = 'small'
-plt.rcParams['figure.titlesize'] = 'medium'
+#plt.rcParams['figure.titlesize'] = 'medium'
 
 plt.rcParams['lines.linewidth'] = 0.5
 
