@@ -8,8 +8,10 @@ rm -r input
 
 rm *.tfs
 rm *.ptc
+rm *.png
 rm PTC-PyORBIT_flat_file.flt
 rm tunespread.dat
 rm madx.ps
+rm All_Twiss/*
 
 . clean_junk.sh
