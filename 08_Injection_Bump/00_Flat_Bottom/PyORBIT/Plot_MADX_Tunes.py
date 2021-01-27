@@ -24,10 +24,10 @@ def add_input_file(dd, filename, label):
 	f = filename
 	p = dict()
 	sio.loadmat(f, mdict=p)
-	dd[label] = p	
+	dd[label] = p
 	print '\tAdded output data from ', filename, '\t dictionary key: ', label
 	return dd
-
+        
 # Function takes the data, creates the correct timing for each value in
 # seconds, then appends the required number of intervals with zeroes
 def Create_Timing(ramp_stop_time, simulation_stop_time):
@@ -59,7 +59,7 @@ def Create_Timing(ramp_stop_time, simulation_stop_time):
 # Create dd dictionary
 dd = dict()
 dd = add_input_file(dd, 'output/output.mat', 'PyORBIT')
-print 'Final data dictionary keys: ', dd.keys()
+print 'Final data dictionary keys: ', dd['PyORBIT'].keys()
 
 sc = 'Slice-by-Slice'
 main_label = '08'
@@ -82,10 +82,10 @@ fin = open(infile,'r').readlines()[8:]
 
 # Save s, x
 for l in fin:
-	madx_qx.append(float(l.split()[8])-6.)
-	madx_qy.append(float(l.split()[9])-6.)
-	ptc_qx.append(float(l.split()[10]))
-	ptc_qy.append(float(l.split()[11]))
+	madx_qx.append(float(l.split()[9])-6.)
+	madx_qy.append(float(l.split()[10])-6.)
+	ptc_qx.append(float(l.split()[11]))
+	ptc_qy.append(float(l.split()[12]))
 
 size = len(ptc_qx)
 turns = np.linspace(0, 500, size)
