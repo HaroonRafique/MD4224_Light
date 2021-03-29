@@ -23,7 +23,20 @@ queue = 'inf-short'
 
 n_nodes = 2 
 
-jobname = 'IB_LS_21'
+space_charge_flag = int(os.getcwd().split('/')[-1][0])
+print 'simulation_parameters: space charge = ', space_charge_flag
+transverse_plane = os.getcwd().split('/')[-1][2]
+print 'simulation_parameters: transverse_plane = ', transverse_plane
+scan_tune = os.getcwd().split('/')[-1][-2:]
+
+if space_charge_flag:
+        n_nodes = 4 
+        queue = 'inf-long'
+else:
+        n_nodes = 2 
+        queue = 'inf-short'
+        
+jobname = str(space_charge_flag) + '_' + str(transverse_plane) + '_' + str(scan_tune)
 
 path_to_simulation = os.path.dirname(os.path.realpath(__file__)) # This directory
 
