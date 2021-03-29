@@ -80,7 +80,7 @@ if Horizontal_Scan_NoSC:
 		print '--------------------------------------------------------------------------------------------'
 		print '\t Submitting HPC-Batch simulation: ', loc
 		print '--------------------------------------------------------------------------------------------'
-		dir_ = master_dir + loc
+		dir_ = master_dir + loc + '/PyORBIT'
 		make_command = 'python Make_SLURM_submission_script.py'
 		submit_command = 'sbatch SLURM_submission_script.sh'
 		os.chdir(dir_)
@@ -92,7 +92,7 @@ if Vertical_Scan_NoSC:
 		print '--------------------------------------------------------------------------------------------'
 		print '\t Submitting HPC-Batch simulation: ', loc
 		print '--------------------------------------------------------------------------------------------'
-		dir_ = master_dir + loc
+		dir_ = master_dir + loc + '/PyORBIT'
 		make_command = 'python Make_SLURM_submission_script.py'
 		submit_command = 'sbatch SLURM_submission_script.sh'
 		os.chdir(dir_)
@@ -104,7 +104,7 @@ if Horizontal_Scan:
 		print '--------------------------------------------------------------------------------------------'
 		print '\t Submitting HPC-Batch simulation: ', loc
 		print '--------------------------------------------------------------------------------------------'
-		dir_ = master_dir + loc
+		dir_ = master_dir + loc + '/PyORBIT'
 		make_command = 'python Make_SLURM_submission_script.py'
 		submit_command = 'sbatch SLURM_submission_script.sh'
 		os.chdir(dir_)
@@ -116,7 +116,7 @@ if Vertical_Scan:
 		print '--------------------------------------------------------------------------------------------'
 		print '\t Submitting HPC-Batch simulation: ', loc
 		print '--------------------------------------------------------------------------------------------'
-		dir_ = master_dir + loc
+		dir_ = master_dir + loc + '/PyORBIT'
 		make_command = 'python Make_SLURM_submission_script.py'
 		submit_command = 'sbatch SLURM_submission_script.sh'
 		os.chdir(dir_)
