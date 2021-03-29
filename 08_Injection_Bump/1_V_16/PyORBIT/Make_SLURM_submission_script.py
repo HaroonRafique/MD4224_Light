@@ -23,11 +23,11 @@ queue = 'inf-short'
 
 n_nodes = 2 
 
-space_charge_flag = int(os.getcwd().split('/')[-1][0])
+space_charge_flag = int(os.getcwd().split('/')[-2][0])
 print 'simulation_parameters: space charge = ', space_charge_flag
-transverse_plane = os.getcwd().split('/')[-1][2]
+transverse_plane = os.getcwd().split('/')[-2][2]
 print 'simulation_parameters: transverse_plane = ', transverse_plane
-scan_tune = os.getcwd().split('/')[-1][-2:]
+scan_tune = os.getcwd().split('/')[-2][-2:]
 
 if space_charge_flag:
         n_nodes = 4 
