@@ -5,13 +5,13 @@ import numpy as np
 # Space charge flag - horizontal/vertical scan - scan point
 # e.g. 0_H_07
 
-# ~ space_charge_flag = int(os.getcwd().split('/')[-1][0])
-# ~ transverse_plane = os.getcwd().split('/')[-1][2]
-# ~ scan_tune = os.getcwd().split('/')[-1][-2:]
+space_charge_flag = int(os.getcwd().split('/')[-1][0])
+transverse_plane = os.getcwd().split('/')[-1][2]
+scan_tune = os.getcwd().split('/')[-1][-2:]
 
-space_charge_flag = 0
-transverse_plane = 'H'
-scan_tune = '07'
+# ~ space_charge_flag = 0
+# ~ transverse_plane = 'H'
+# ~ scan_tune = '07'
 
 print 'simulation_parameters: space charge = ', space_charge_flag
 print 'simulation_parameters: transverse_plane = ', transverse_plane
