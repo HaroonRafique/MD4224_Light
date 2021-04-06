@@ -5,9 +5,9 @@ import numpy as np
 # Space charge flag - horizontal/vertical scan - scan point
 # e.g. 0_H_07
 
-space_charge_flag = int(os.getcwd().split('/')[-1][0])
-transverse_plane = os.getcwd().split('/')[-1][2]
-scan_tune = os.getcwd().split('/')[-1][-2:]
+space_charge_flag = int(os.getcwd().split('/')[-2][0])
+transverse_plane = os.getcwd().split('/')[-2][2]
+scan_tune = os.getcwd().split('/')[-2][-2:]
 
 # ~ space_charge_flag = 0
 # ~ transverse_plane = 'H'
